@@ -2,16 +2,22 @@ package co.simplon.lifegarage;
 
 public enum Color {
 	
-/*	ROUGE("#FFFF00"), VERT("#008000") ,BLEU("#0000FF");	
+	RED("ROUGE","FFFF00"), GREEN("VERT","#008000") ,BLUE("BLEU","#0000FF");	
 	
-	private String color;
+	private final String colorKey;
+	private final String colorValue;
 
-	private Color(String color) {
-		this.color = color;
+	private Color(String colorKey, String colorValue) {
+		this.colorValue = colorValue;
+		this.colorKey = colorKey;
 	}
 
-	public String getColor() {
-		return this.color;
-	}*/
+	public String getColorKey() {
+		return this.colorKey;
+	}
+
+	public String getColorValue() {
+		return colorValue;
+	}
 	
 }

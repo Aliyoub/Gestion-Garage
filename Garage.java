@@ -6,15 +6,26 @@ import java.util.List;
 public class Garage {
 	
 	private String name;
-	private List<Car> cars = new ArrayList<>() ;
+	private List<Car> cars ;
+	private List<Vehicle> vehicles ;
 	
-    public Garage(String name, List<Car> cars) {
-        this.name = name;
-        this.cars = cars;
-    }
-
-	public void addCar(String brand,String color,double price){
-		this.cars.add(new Car(brand,color,price));
+	public Garage(String name) {
+    	
+    	this.name = name;
+    }   
+	
+	public void addCar(List<Car> cars){
+		
+		this.cars = cars;
+	}
+	
+	public void addVehicle(List<Vehicle> vehicles){
+		
+		this.vehicles = vehicles;
 	}
 
+	public List<Vehicle> getVehicles() {
+		return vehicles;
+	}
+	
 }
