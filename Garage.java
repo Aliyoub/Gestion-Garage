@@ -9,8 +9,8 @@ public class Garage {
 	private List<Vehicle> vehicles ;
 	
 	public Garage(String name) {    	
-    	this.name = name;
-    }   
+		this.name = name;
+	}   
 	
 	public void addCar(List<Car> cars){		
 		this.cars = cars;
@@ -19,7 +19,7 @@ public class Garage {
 	public void addVehicle(List<Vehicle> vehicles){		
 		this.vehicles = vehicles;
 	}
-
+	
 	public List<Vehicle> getVehicles() {
 		return vehicles;
 	}	
