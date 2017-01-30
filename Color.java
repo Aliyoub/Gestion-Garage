@@ -1,7 +1,6 @@
 package co.simplon.lifegarage;
 
-public enum Color {
-	
+public enum Color {	
 	RED("ROUGE","FFFF00"), GREEN("VERT","#008000") ,BLUE("BLEU","#0000FF");
 	
 	private final String colorKey;
