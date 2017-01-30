@@ -2,10 +2,10 @@ package co.simplon.lifegarage;
 
 public class Bike extends Vehicle {
 	private String brand;
-	private Color color;	
+	private Color color;
 	private float price;
 	private float taxe = 1;
-	
+
 	public Bike(String brand, Color color, float price) {
 		super();
 		this.brand = brand;
@@ -14,9 +14,9 @@ public class Bike extends Vehicle {
 	}
 
 	@Override
-	public float getPriceWithTaxe() {		
+	public float getPriceWithTaxe() {
 		return this.price + this.taxe;
-	}	
+	}
 
 	public String getBrand() {
 		return brand;
@@ -25,7 +25,7 @@ public class Bike extends Vehicle {
 	public String getColor() {
 		return this.color.getColorKey();
 	}
-	
+
 	public float getPrice() {
 		return price;
 	}
