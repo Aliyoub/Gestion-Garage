@@ -1,18 +1,18 @@
 package co.simplon.lifegarage;
 
 public class Bike extends Vehicle {
-	private float taxe = 1;
 
-	public Bike(String b, Color c, float p) {
+	public Bike(String brand, Color color, float price) {
 		super();
-		brand = b;
-		color = c;
-		price = p;
+		this.brand = brand;
+		this.color = color;
+		this.price = price;
 	}
 
 	@Override
 	public float getPriceWithTaxe() {
-		return price + this.taxe;
+		float tax = 1f;
+		return price + tax;
 	}
 
 	public String getBrand() {

@@ -1,13 +1,12 @@
 package co.simplon.lifegarage;
 
 public class Car extends Vehicle{
-	private float taxe = 2;
 
-	public Car(String b, Color c, float p) {
+	public Car(String brand, Color color, float price) {
 
-		brand = b;
-		color = c;
-		price = p;
+		this.brand = brand;
+		this.color = color;
+		this.price = price;
 	}
 
 	public String getBrand() {
@@ -21,9 +20,10 @@ public class Car extends Vehicle{
 	public float getPrice() {
 		return price;
 	}
-
+	
 	@Override
 	public float getPriceWithTaxe() {
-		return price + this.taxe;
+		float tax  = 2f;
+		return price + tax;
 	}
 }

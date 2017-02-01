@@ -1,28 +1,25 @@
 package co.simplon.lifegarage;
 
 import java.util.List;
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class LifeGarage {
 
 	public static void main(String[] args) {
+		Garage garage = new Garage("garage"); 			
+		
 		// Ajout et affichage de la voiture Renault
-		Car renault1 = new Car("renault",Color.RED, 999.9f); // Création (instanciation de la voiture)
-				
-		List<Car> cars = new ArrayList<>();
-		cars.add(renault1);
+		Car renault1 = new Car("renault",Color.RED, 999.9f); // Création (instanciation de la voiture)			
+		garage.addCar(renault1);
+
 		System.out.println(renault1.getBrand()+' '+renault1.getColor()+' '+renault1.getPrice() + "\n");
 		
-		// Ajout et affichage des voitures Peugeot, Volkswagen, Renault
-		Car peugeot1 = new Car("peugeot",Color.GREEN, 1000);
-		Car volkswagen1 = new Car("volkswagen",Color.BLUE, 1500);
-		Car renault2 = new Car("renault",Color.RED, 2000.5f);
-		
-		cars.add(peugeot1);
-		cars.add(volkswagen1);
-		cars.add(renault2);
 
-		Garage garage = new Garage("garage"); // 
+		// Ajout et affichage des voitures Peugeot, Volkswagen, Renault
+		Car peugeot1 = new Car("peugeot",Color.GREEN, 1000f);
+		Car volkswagen1 = new Car("volkswagen",Color.BLUE, 1500f);
+		Car renault2 = new Car("renault",Color.RED, 2000.5f);
+		List<Car> cars= Arrays.asList(peugeot1,volkswagen1,renault2);
 		garage.addCar(cars);	// Ajout des voitures dans le garage
 
 		for(Car car : cars){
@@ -30,24 +27,15 @@ public class LifeGarage {
 		}
 
 		System.out.println("\n /*************	Partie Abstrait	***********************************/");
-		List<Vehicle> vehicles = new ArrayList<Vehicle>();
 
-		// Ajout des véhicules dans le garage
-		vehicles.add(new Car("renault",Color.RED, 999.9f));
-
-		vehicles.add(new Car("peugeot",Color.GREEN, 1000));
-		vehicles.add(new Car("volkswagen",Color.BLUE, 1500));
-		vehicles.add(new Car("renault",Color.RED, 2000.5f));
-
-		vehicles.add(new Bike("harley",Color.RED, 800f));
-		vehicles.add(new Bike("ducati", Color.BLUE, 1000f));
-		vehicles.add(new Bike("bmw", Color.GREEN, 1999.9f));
-
-		garage.addVehicle(vehicles);
+		// Ajout des motos dans le garage
+		Bike harley1 = new Bike("harley",Color.RED, 800f);
+		Bike ducati1 = new Bike("ducati", Color.BLUE, 1000f);
+		Bike bmw1 = new Bike("bmw", Color.GREEN, 1999.9f);
+		List<Bike> bikes= Arrays.asList(harley1,ducati1,bmw1);
+		garage.addBike(bikes);
 
 		// Affichage des véhicules dans le garage avec leurs prix taxés
-		for(Vehicle vehicle : vehicles){
-			System.out.println(vehicle.toString());
-		}
+		System.out.println(cars+" \n"+bikes);
 	}
 }
